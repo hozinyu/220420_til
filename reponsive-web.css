@@ -1,0 +1,151 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Schoolbell', cursive;
+    list-style: none;
+    color: white;
+}
+
+.my-web {
+    background-image: url('./cafe-muso.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-top: 10px;
+}
+.web-title { 
+    text-align: center;
+    margin-left: 20px; padding-top: 2px;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgb(122, 74, 15);
+}
+
+.menu-bar {
+    background-image: url('./coffee-menu.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    display: block;
+    width: 50px; height: 45px;
+    cursor: pointer;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+}
+
+
+.menu-bar:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.811) ;
+    color: black;
+}
+
+.dropdown-menu li:nth-child(1) { 
+    animation: rotateX 1000ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(2) { 
+    animation: rotateX 1100ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(3) { 
+    animation: rotateX 1200ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(4) { 
+    animation: rotateX 1300ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(5) { 
+    animation: rotateX 1400ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(6) { 
+    animation: rotateX 1500ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(7) { 
+    animation: rotateX 1600ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(8) { 
+    animation: rotateX 1700ms ease-in-out forwards;
+}
+.dropdown-menu li:nth-child(9) { 
+    animation: rotateX 1800ms ease-in-out forwards;
+}
+
+
+@keyframes rotateX {
+    from{ 
+        transform: rotateX(-90deg);
+        opacity: 0;}
+    to{
+        transform: rotateX(0deg);
+        opacity: 1;}
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    line-height: 2.3em;
+    letter-spacing: 7px;
+    text-align: center; 
+    color: white; 
+}
+
+.join-us {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0; left: 0;
+    text-align: center;
+    background-color: #fd9951cf;
+}
+
+@media screen and (min-width : 415px) {
+
+    .header {
+        padding-top: 20px;
+    }
+    .menu-bar {
+        width: 75px; height: 75px;
+    }
+
+    .web-title {
+        font-size: 55px ;
+    }
+
+    .main-content {
+        font-size: 20px;
+    }
+
+    .dropdown-menu {
+        font-size: 20px;
+    }
+    
+    .menu-bar:hover .dropdown-menu {
+        margin-top: 70px;
+    }
+
+}
